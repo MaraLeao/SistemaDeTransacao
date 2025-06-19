@@ -21,6 +21,7 @@ public class TransactionServiceImpl implements TransactionService {
 
     @Override
     public Transaction save(TransactionDTO transactionDTO) {
+
         Transaction transaction = new Transaction();
         BeanUtils.copyProperties(transactionDTO, transaction);
         return transactionRepository.save(transaction);
