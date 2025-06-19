@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.util.BeanUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -21,7 +22,6 @@ public class TransactionServiceImpl implements TransactionService {
 
     @Override
     public Transaction save(TransactionDTO transactionDTO) {
-
         Transaction transaction = new Transaction();
         BeanUtils.copyProperties(transactionDTO, transaction);
         return transactionRepository.save(transaction);

@@ -23,6 +23,5 @@ public class Transaction {
     private String cardNumber;
     private String cvv;
     private  String owner;
-    private  String ein;
 
 }
